@@ -4,9 +4,13 @@
 class FizzBuzz:
 
     def __init__(self):
-        divisibility_rules = [(3, "Fizz"), (5, "Buzz")]
-        self.specs = [self.create_divisibility_checker(divisor)(outputString) for divisor, outputString in
-                      divisibility_rules]
+        divisibility_rules = [
+            (3, "Fizz"),
+            (5, "Buzz")
+        ]
+        self.specs = [self.create_divisibility_checker(divisor)(outputString)
+                      for divisor, outputString
+                      in divisibility_rules]
 
     def create_divisibility_checker(self, check_value):
         def divisibilityResponse(outputString):
