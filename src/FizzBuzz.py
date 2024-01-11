@@ -8,9 +8,11 @@ class FizzBuzz:
             (3, "Fizz"),
             (5, "Buzz")
         ]
-        self.divisibility_checkers = [self.create_divisibility_checker(divisor)(outputString)
-                                      for divisor, outputString
-                                      in divisibility_rules]
+        self.divisibility_checkers = [
+            self.create_divisibility_checker(divisor)(outputString)
+            for divisor, outputString
+            in divisibility_rules
+        ]
 
     def create_divisibility_checker(self, check_value):
         def divisibilityResponse(outputString):
