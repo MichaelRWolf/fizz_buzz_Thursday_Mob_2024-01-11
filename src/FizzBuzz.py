@@ -18,10 +18,11 @@ class FizzBuzz:
     def create_divisibility_checker(self, rule_factor):
         def divisibility_response(rule_string):
             def rule_string_for_number(n):
-                if self.is_factor_of(n, rule_factor):
-                    return rule_string
-                else:
-                    return ""
+                # if self.is_factor_of(n, rule_factor):
+                #     return rule_string
+                # else:
+                #     return ""
+                return rule_string if self.is_factor_of(n, rule_factor) else ""
 
             return rule_string_for_number
 
