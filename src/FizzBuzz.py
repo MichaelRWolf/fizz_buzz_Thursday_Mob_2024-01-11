@@ -15,18 +15,19 @@ class FizzBuzz:
         ]
 
     def create_divisibility_checker(self, check_value):
-        def divisibilityResponse(outputString):
-            def check_and_return_outputString(number):
+        def divisibility_response(output_string):
+            def check_and_return_output_string(number):
                 if self.is_divisible_by(number, check_value):
-                    return outputString
+                    return output_string
                 else:
                     return ""
 
-            return check_and_return_outputString
+            return check_and_return_output_string
 
-        return divisibilityResponse
+        return divisibility_response
 
-    def is_divisible_by(self, number, divisor):
+    @staticmethod
+    def is_divisible_by(number, divisor):
         return number % divisor == 0
 
     def fizz_and_buzz(self, number):
