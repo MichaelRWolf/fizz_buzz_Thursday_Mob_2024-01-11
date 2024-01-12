@@ -5,19 +5,20 @@ class FizzBuzz:
 
     def __init__(self):
         divisibility_rules = [
+            # (factor, string)
             (3, "Fizz"),
             (5, "Buzz")
         ]
         self.divisibility_checkers = [
-            self.create_divisibility_checker(rule_number)(rule_string)
-            for rule_number, rule_string
+            self.create_divisibility_checker(rule_factor)(rule_string)
+            for rule_factor, rule_string
             in divisibility_rules
         ]
 
-    def create_divisibility_checker(self, rule_number):
+    def create_divisibility_checker(self, rule_factor):
         def divisibility_response(rule_string):
             def rule_string_for_number(n):
-                if self.is_divisor_of(n, rule_number):
+                if self.is_factor_of(n, rule_factor):
                     return rule_string
                 else:
                     return ""
@@ -27,7 +28,7 @@ class FizzBuzz:
         return divisibility_response
 
     @staticmethod
-    def is_divisor_of(number, divisor):
+    def is_factor_of(number, divisor):
         return number % divisor == 0
 
     def fizz_and_buzz(self, number):
