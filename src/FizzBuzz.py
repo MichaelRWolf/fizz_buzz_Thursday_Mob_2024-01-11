@@ -17,7 +17,7 @@ class FizzBuzz:
     def create_divisibility_checker(self, check_value):
         def divisibility_response(output_string):
             def check_and_return_output_string(number):
-                if self.is_divisible_by(number, check_value):
+                if self.is_divisor_of(number, check_value):
                     return output_string
                 else:
                     return ""
@@ -27,7 +27,7 @@ class FizzBuzz:
         return divisibility_response
 
     @staticmethod
-    def is_divisible_by(number, divisor):
+    def is_divisor_of(number, divisor):
         return number % divisor == 0
 
     def fizz_and_buzz(self, number):
