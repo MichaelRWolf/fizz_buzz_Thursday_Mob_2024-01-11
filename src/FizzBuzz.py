@@ -14,15 +14,15 @@ class FizzBuzz:
             in divisibility_rules
         ]
 
-    def create_divisibility_checker(self, check_value):
-        def divisibility_response(output_string):
-            def check_and_return_output_string(number):
-                if self.is_divisor_of(number, check_value):
-                    return output_string
+    def create_divisibility_checker(self, rule_number):
+        def divisibility_response(rule_string):
+            def rule_string_for_number(n):
+                if self.is_divisor_of(n, rule_number):
+                    return rule_string
                 else:
                     return ""
 
-            return check_and_return_output_string
+            return rule_string_for_number
 
         return divisibility_response
 
