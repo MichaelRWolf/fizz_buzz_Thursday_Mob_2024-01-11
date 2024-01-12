@@ -31,9 +31,14 @@ class FizzBuzz:
         return number % divisor == 0
 
     def fizz_and_buzz(self, number):
-        result = ""
-        for divisibility_checker in self.divisibility_checkers:
-            result += divisibility_checker(number)
+        # result = ""
+        # for divisibility_checker in self.divisibility_checkers:
+        #     result += divisibility_checker(number)
+        result = ''.join(
+            map(
+                lambda checker: checker(number),
+                self.divisibility_checkers)
+        )
         return result
 
     def fizzbuzz(self, number):
