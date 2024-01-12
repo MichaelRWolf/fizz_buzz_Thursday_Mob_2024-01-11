@@ -9,8 +9,8 @@ class FizzBuzz:
             (5, "Buzz")
         ]
         self.divisibility_checkers = [
-            self.create_divisibility_checker(divisor)(outputString)
-            for divisor, outputString
+            self.create_divisibility_checker(check_value)(outputString)
+            for check_value, outputString
             in divisibility_rules
         ]
 
