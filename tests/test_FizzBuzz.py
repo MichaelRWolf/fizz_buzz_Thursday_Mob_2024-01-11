@@ -1,6 +1,7 @@
 import unittest
 from src.FizzBuzz import FizzBuzz
 
+
 class FizzBuzzTest(unittest.TestCase):
 
     def setUp(self):
@@ -21,6 +22,7 @@ class FizzBuzzTest(unittest.TestCase):
     def test_numbers(self):
         self.assertEqual(self.fizzbuzz.fizzbuzz(2), "2")
         self.assertEqual(self.fizzbuzz.fizzbuzz(4), "4")
+
 
 if __name__ == '__main__':
     unittest.main()
